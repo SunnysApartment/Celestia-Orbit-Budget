@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملخص المالي - سيليستيا للتسويق الرقمي</title>
+
+    <!-- (Favicon) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15 L61 38 L86 38 L66 54 L73 78 L50 63 L27 78 L34 54 L14 38 L39 38 Z' fill='%2300f2fe'/></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        cosmic: {
+                            deep: '#03001e',
+                            void: '#0a0015',
+                            nebula: '#7303c0',
+                            star: '#ec38bc',
+                            cyan: '#00f2fe',
+                            gold: '#f6d365'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #03001e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #7303c0;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f2fe;
+        }
+
+        .glass {
+            background: rgba(10, 0, 21, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 12px rgba(0, 242, 254, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-cosmic-deep text-gray-100 overflow-x-hidden font-sans transition-all duration-300">
+
+    <!-- خلفية النجوم المتحركة المتطابقة مع V3 -->
+    <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
+
+    <!-- الهيدر واللوجو بعد التعديل للغة العربية -->
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-12 h-12 flex items-center justify-center">
+                    <svg class="w-10 h-10 transform group-hover:rotate-180 transition-transform duration-700"
+                        viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" stroke="url(#logo-grad)" stroke-width="1.5"
+                            stroke-dasharray="4 4" class="opacity-60" />
+                        <path d="M50 20 L55 35 L70 35 L58 45 L62 60 L50 50 L38 60 L42 45 L30 35 L45 35 Z" fill="#00f2fe"
+                            class="animate-pulse" />
+                        <circle cx="28" cy="55" r="3" fill="#ffffff" class="opacity-80" />
+                        <circle cx="72" cy="55" r="3" fill="#ffffff" class="opacity-80" />
+                        <circle cx="50" cy="75" r="3" fill="#ec38bc" />
+                        <defs>
+                            <linearGradient id="logo-grad" x1="0" y1="0" x2="100" y2="100">
+                                <stop offset="0%" stop-color="#00f2fe" />
+                                <stop offset="100%" stop-color="#7303c0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div
+                        class="absolute inset-0 bg-cosmic-cyan/10 blur-xl rounded-full group-hover:bg-cosmic-nebula/30 transition-all duration-500">
+                    </div>
+                </div>
+                <div>
+                    <!-- تعريب اسم الشعار والوصف -->
+                    <span
+                        class="font-extrabold text-xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-cosmic-cyan block leading-tight">سيليستيا</span>
+                    <span class="block text-[10px] tracking-wider text-cosmic-cyan font-bold uppercase -mt-0.5">
+                        للتسويق الرقمي</span>
+                </div>
+            </a>
+            <!-- تعريب النص الجانبي للمشروع -->
+            <span class="text-xs text-cosmic-star tracking-wide font-bold">القياس المالي // 2026</span>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-24 space-y-16 relative z-10">
+
+        <!-- عنوان المحاكاة الفضائية -->
+        <div class="text-center space-y-4">
+            <h1 class="font-extrabold text-3xl md:text-5xl text-white">
+                مصفوفة البيانات المالية والتشغيلية لدورة <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-cosmic-cyan to-cosmic-star text-glow">المشروع</span>
+            </h1>
+            <div class="w-24 h-1 bg-gradient-to-r from-cosmic-cyan to-cosmic-star mx-auto rounded-full"></div>
+        </div>
+
+        <!-- أولًا: تأسيس المقر -->
+        <section class="glass p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden animate-float">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-cosmic-cyan/5 rounded-full filter blur-xl"></div>
+            <h2 class="font-bold text-xl text-cosmic-cyan mb-6 flex items-center gap-2"><i
+                    class="fa-solid fa-building"></i> أولًا: تكلفة تأسيس المقر (One-Time Setup)</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-right text-sm">
+                    <thead class="text-cosmic-cyan border-b border-white/10 font-bold">
+                        <tr>
+                            <th class="pb-3">البند</th>
+                            <th class="pb-3 text-left">التكلفة (جنيه مصري)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 text-gray-300">
+                        <tr>
+                            <td class="py-3">إيجار أول شهر</td>
+                            <td class="py-3 text-left">10,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">تأمين شهرين</td>
+                            <td class="py-3 text-left">20,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">مكاتب عمل لـ6 أفراد</td>
+                            <td class="py-3 text-left">10,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">ترابيزة اجتماعات</td>
+                            <td class="py-3 text-left">5,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">10 كراسي</td>
+                            <td class="py-3 text-left">9,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">تكييف شامل التركيب</td>
+                            <td class="py-3 text-left">30,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">الإنترنت والتركيب</td>
+                            <td class="py-3 text-left">15,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">كاتل</td>
+                            <td class="py-3 text-left">3,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">سبورة</td>
+                            <td class="py-3 text-left">2,500</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">سلة قمامة وإكسسوارات</td>
+                            <td class="py-3 text-left">500</td>
+                        </tr>
+                        <tr class="text-white">
+                            <td class="py-3 font-semibold">6 أجهزة كمبيوتر</td>
+                            <td class="py-3 text-left font-bold text-cosmic-cyan">70,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 pt-6 border-t border-white/10 text-xs font-bold text-center">
+                <div class="p-3 rounded-xl bg-white/5 border border-white/5">الإجمالي قبل الاحتياطي = 175,000 جنيه</div>
+                <div class="p-3 rounded-xl bg-cosmic-star/10 border border-cosmic-star/20 text-cosmic-star">احتياطي
+                    (10%) = 17,500 جنيه</div>
+                <div class="p-3 rounded-xl bg-cosmic-cyan/10 border border-cosmic-cyan/30 text-cosmic-cyan">إجمالي تأسيس
+                    المقر = 192,500 جنيه مصري</div>
+            </div>
+        </section>
+
+        <!-- ثانيًا، ثالثًا، رابعًا وخامسًا: طواقم التشغيل والهياكل -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- ثانيًا: فريق زد التقني -->
+            <div class="glass p-6 rounded-2xl border border-white/10 space-y-4">
+                <h3 class="font-bold text-lg text-cosmic-star"><i class="fa-solid fa-code"></i> ثانيًا: فريق مشروع "زد"
+                    (Technical Team)</h3>
+                <p class="text-[11px] text-cosmic-cyan bg-cosmic-cyan/5 px-2.5 py-1 rounded-md inline-block">يتم تشغيل
+                    هذا الفريق بمجرد بدء مشروع زد.</p>
+                <div class="bg-black/40 p-3 rounded-xl border border-white/5 text-xs flex justify-between items-center">
+                    <div>
+                        <span class="block font-bold text-white">Technical Team</span>
+                        <span class="text-gray-400">العدد: 4 أفراد</span>
+                    </div>
+                    <span class="text-cosmic-star font-bold">40,000 جنيه / شهريًا</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 pt-2 text-[11px] font-bold text-center">
+                    <div class="bg-white/5 p-2 rounded-lg">شهر واحد = 40,000 ج</div>
+                    <div class="bg-cosmic-star/15 text-cosmic-star p-2 rounded-lg">3 شهور = 120,000 ج</div>
+                </div>
+            </div>
+
+            <!-- ثالثًا: فريق الـ In-House -->
+            <div class="glass p-6 rounded-2xl border border-white/10 flex flex-col justify-between space-y-4">
+                <h3 class="font-bold text-lg text-cosmic-gold"><i class="fa-solid fa-user-group"></i> ثالثًا: فريق الـ
+                    In-House (Part-Time)</h3>
+                <div class="space-y-2 text-xs">
+                    <div class="flex justify-between bg-white/5 px-3 py-2 rounded-lg"><span>Social Media</span> <span
+                            class="text-cosmic-gold">العدد: 1</span></div>
+                    <div class="flex justify-between bg-white/5 px-3 py-2 rounded-lg"><span>Graphic Designer</span>
+                        <span class="text-cosmic-gold">العدد: 1</span>
+                    </div>
+                </div>
+                <div class="pt-2 text-[11px] font-bold text-center grid grid-cols-3 gap-2 border-t border-white/5">
+                    <div class="bg-cosmic-gold/10 text-cosmic-gold p-2 rounded-lg col-span-1">شهريًا: 10,000 ج</div>
+                    <div class="bg-white/5 p-2 rounded-lg col-span-1">شهر: 10,000 ج</div>
+                    <div class="bg-white/5 p-2 rounded-lg col-span-1">3 شهور: 30,000 ج</div>
+                </div>
+            </div>
+
+            <!-- رابعًا: فريق المبيعات -->
+            <div class="glass p-6 rounded-2xl border border-white/10 space-y-4">
+                <h3 class="font-bold text-lg text-purple-400"><i class="fa-solid fa-chart-line"></i> رابعًا: فريق
+                    المبيعات</h3>
+                <p class="text-[11px] text-gray-400">نفترض أن الفريق يتكون من 6 أفراد بإجمالي الرواتب المذكورة.</p>
+                <div class="bg-black/40 p-3 rounded-xl border border-white/5 text-xs flex justify-between items-center">
+                    <span class="font-bold text-white">Sales Team (6 أفراد)</span>
+                    <span class="text-purple-400 font-bold">36,000 جنيه / شهريًا</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-[11px] font-bold text-center">
+                    <div class="bg-white/5 p-2 rounded-lg">شهر واحد = 36,000 ج</div>
+                    <div class="bg-purple-500/15 text-purple-300 p-2 rounded-lg">3 شهور = 108,000 ج</div>
+                </div>
+            </div>
+
+            <!-- خامسًا: المؤسسون -->
+            <div class="glass p-6 rounded-2xl border border-white/10 flex flex-col justify-between space-y-4">
+                <h3 class="font-bold text-lg text-cosmic-cyan"><i class="fa-solid fa-user-tie"></i> خامسًا: المؤسسون
+                </h3>
+                <div class="grid grid-cols-3 gap-2 text-[10px] text-center text-gray-300">
+                    <div class="bg-white/5 p-2 rounded-lg">CEO (1)</div>
+                    <div class="bg-white/5 p-2 rounded-lg">Head of Tech (1)</div>
+                    <div class="bg-white/5 p-2 rounded-lg">هيد الماركتنج (1)</div>
+                </div>
+                <div class="pt-2 text-[11px] font-bold text-center grid grid-cols-3 gap-2 border-t border-white/5">
+                    <div class="bg-cosmic-cyan/10 text-cosmic-cyan p-2 rounded-lg col-span-1">شهريًا: 24,000 ج</div>
+                    <div class="bg-white/5 p-2 rounded-lg col-span-1">شهر: 24,000 ج</div>
+                    <div class="bg-white/5 p-2 rounded-lg col-span-1">3 شهور: 72,000 ج</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- سادسًا وسابعًا وثامنًا وتاسعًا: تفاصيل التشغيل والتوسع -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- سادسًا: التشغيل مع زد -->
+            <div class="glass p-6 rounded-2xl border border-white/10 flex flex-col justify-between space-y-4">
+                <h3 class="font-bold text-sm text-cosmic-star"><i class="fa-solid fa-rocket"></i> سادسًا: مع مشروع "زد"
+                </h3>
+                <div class="space-y-1.5 text-xs">
+                    <div class="flex justify-between text-gray-400 border-b border-white/5 pb-1">
+                        <span>البند</span><span>شهر / 3 شهور</span>
+                    </div>
+                    <div class="flex justify-between"><span>الفريق التقني</span><span>40k / 120k</span></div>
+                    <div class="flex justify-between"><span>فريق In-House</span><span>10k / 30k</span></div>
+                    <div class="flex justify-between"><span>المؤسسون</span><span>24k / 72k</span></div>
+                </div>
+                <div
+                    class="p-2.5 rounded-lg bg-cosmic-star/10 text-[11px] font-bold text-center border border-cosmic-star/20">
+                    الإجمالي الشهري: 74,000 ج <br> إجمالي 3 شهور: 222,000 ج
+                </div>
+            </div>
+
+            <!-- سابعًا: التشغيل مع عملاء بدون توسع -->
+            <div class="glass p-6 rounded-2xl border border-white/10 flex flex-col justify-between space-y-4">
+                <h3 class="font-bold text-sm text-cosmic-cyan"><i class="fa-solid fa-chart-pie"></i> سابعًا: مع عملاء
+                    (بدون توسع)</h3>
+                <div class="space-y-1.5 text-xs">
+                    <div class="flex justify-between text-gray-400 border-b border-white/5 pb-1">
+                        <span>البند</span><span>شهر / 3 شهور</span>
+                    </div>
+                    <div class="flex justify-between"><span>الفريق التقني</span><span>40k / 120k</span></div>
+                    <div class="flex justify-between"><span>فريق In-House</span><span>10k / 30k</span></div>
+                    <div class="flex justify-between"><span>فريق المبيعات</span><span>36k / 108k</span></div>
+                    <div class="flex justify-between"><span>المؤسسون</span><span>24k / 72k</span></div>
+                </div>
+                <div
+                    class="p-2.5 rounded-lg bg-cosmic-cyan/10 text-[11px] font-bold text-center border border-cosmic-cyan/20">
+                    التشغيل الشهري: 110,000 ج <br> التشغيل خلال 3 شهور: 330,000 ج
+                </div>
+            </div>
+
+            <!-- ثامنًا وتاسعًا: مرحلة التوسع ومخرجاتها -->
+            <div class="glass p-6 rounded-2xl border border-white/10 flex flex-col justify-between space-y-4">
+                <div>
+                    <h3 class="font-bold text-sm text-cosmic-gold"><i class="fa-solid fa-arrows-to-dot"></i> ثامنًا
+                        وتاسعًا: مرحلة التوسع الإجمالية</h3>
+                    <div class="space-y-1 text-[10px] text-gray-400 mt-2">
+                        <div class="flex justify-between"><span>Sales Manager</span><span>15,000 ج</span></div>
+                        <div class="flex justify-between"><span>فريق الدعم (4 أدوار)</span><span>40,000 ج</span></div>
+                        <div class="flex justify-between"><span>HR + Accountant</span><span>20,000 ج</span></div>
+                        <div class="flex justify-between"><span>Content Creator</span><span>10,000 ج</span></div>
+                    </div>
+                </div>
+                <div
+                    class="p-2.5 rounded-lg bg-cosmic-gold/10 text-[11px] font-bold text-center border border-cosmic-gold/20 text-cosmic-gold">
+                    الراتب الشهري بعد التوسع: 195,000 ج <br> الرواتب خلال 3 شهور: 585,000 ج
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ملخص مالي كوني كامل للوحة التحكم -->
+        <section class="glass p-6 md:p-8 rounded-2xl border border-white/15 relative overflow-hidden">
+            <h2 class="font-bold text-xl text-white mb-6 flex items-center gap-2"><i
+                    class="fa-solid fa-square-poll-vertical text-cosmic-cyan"></i> ملخص مالي كامل (نظرة شاملة للمشروع)
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-right text-sm">
+                    <thead class="text-gray-400 border-b border-white/10 font-bold">
+                        <tr>
+                            <th class="pb-3">المرحلة</th>
+                            <th class="pb-3 text-center">شهر</th>
+                            <th class="pb-3 text-left">3 شهور</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 text-gray-300">
+                        <tr class="hover:bg-white/5">
+                            <td class="py-3.5 font-sans">تأسيس المقر (مرة واحدة)</td>
+                            <td class="py-3.5 text-center text-cosmic-cyan font-bold">192,500</td>
+                            <td class="py-3.5 text-left text-gray-500">—</td>
+                        </tr>
+                        <tr class="hover:bg-white/5">
+                            <td class="py-3.5 font-sans">فريق زد (تقني + In-House + مؤسسين)</td>
+                            <td class="py-3.5 text-center">74,000</td>
+                            <td class="py-3.5 text-left text-cosmic-star">222,000</td>
+                        </tr>
+                        <tr class="hover:bg-white/5">
+                            <td class="py-3.5 font-sans">فريق المبيعات فقط</td>
+                            <td class="py-3.5 text-center">36,000</td>
+                            <td class="py-3.5 text-left text-cosmic-star">108,000</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 bg-cosmic-cyan/5">
+                            <td class="py-3.5 font-sans font-semibold text-white">التشغيل الكامل (بدون توسع)</td>
+                            <td class="py-3.5 text-center font-bold text-cosmic-cyan">110,000</td>
+                            <td class="py-3.5 text-left font-bold text-cosmic-cyan">330,000</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 bg-cosmic-star/5">
+                            <td class="py-3.5 font-sans font-semibold text-white">التشغيل بعد التوسع</td>
+                            <td class="py-3.5 text-center font-bold text-cosmic-star">195,000</td>
+                            <td class="py-3.5 text-left font-bold text-cosmic-star">585,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- محرك الأنيميشن الرياضي الرياضي المتطابق لتوليد النجوم المتحركة -->
+    <script>
+        const starfieldCanvas = document.getElementById('starfield');
+        const starCtx = starfieldCanvas.getContext('2d');
+        let stars = [];
+        const numStars = 120;
+
+        function resizeStarfield() {
+            starfieldCanvas.width = window.innerWidth;
+            starfieldCanvas.height = window.innerHeight;
+            initStars();
+        }
+
+        function initStars() {
+            stars = [];
+            for (let i = 0; i < numStars; i++) {
+                stars.push({
+                    x: Math.random() * starfieldCanvas.width,
+                    y: Math.random() * starfieldCanvas.height,
+                    radius: Math.random() * 1.5,
+                    color: Math.random() > 0.8 ? '#00f2fe' : (Math.random() > 0.9 ? '#ec38bc' : '#ffffff'),
+                    velocity: Math.random() * 0.3 + 0.05
+                });
+            }
+        }
+
+        function animateStarfield() {
+            starCtx.clearRect(0, 0, starfieldCanvas.width, starfieldCanvas.height);
+            starCtx.fillStyle = 'rgba(3, 0, 30, 0.4)';
+            starCtx.fillRect(0, 0, starfieldCanvas.width, starfieldCanvas.height);
+
+            stars.forEach(star => {
+                star.y -= star.velocity;
+                if (star.y < 0) {
+                    star.y = starfieldCanvas.height;
+                    star.x = Math.random() * starfieldCanvas.width;
+                }
+                starCtx.beginPath();
+                starCtx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                starCtx.fillStyle = star.color;
+                starCtx.fill();
+            });
+            requestAnimationFrame(animateStarfield);
+        }
+
+        window.addEventListener('resize', resizeStarfield);
+        resizeStarfield();
+        animateStarfield();
+    </script>
+</body>
+
+</html>
