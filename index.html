@@ -135,24 +135,30 @@
                     class="text-transparent bg-clip-text bg-gradient-to-r from-cosmic-cyan to-cosmic-star text-glow">المشروع</span>
             </h1>
             <div class="w-24 h-1 bg-gradient-to-r from-cosmic-cyan to-cosmic-star mx-auto rounded-full"></div>
-            <p class="text-gray-400 text-sm max-w-2xl mx-auto">تنقل بين السيناريوهات المالية المختلفة وتكاليف التأسيس باستخدام لوحة التحكم التفاعلية أدناه.</p>
+            <p class="text-gray-400 text-sm max-w-2xl mx-auto">تنقل بين السيناريوهات المالية المختلفة وتكاليف التأسيس
+                باستخدام لوحة التحكم التفاعلية أدناه.</p>
         </div>
 
         <!-- أزرار التبويبات (Tabs Layout) -->
         <div class="flex flex-wrap justify-center gap-3 p-2 rounded-2xl glass border border-white/10">
-            <button onclick="switchTab('setup')" id="btn-setup" class="tab-btn active px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
+            <button onclick="switchTab('setup')" id="btn-setup"
+                class="tab-btn active px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
                 <i class="fa-solid fa-building"></i> تأسيس المقر
             </button>
-            <button onclick="switchTab('scenario1')" id="btn-scenario1" class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
+            <button onclick="switchTab('scenario1')" id="btn-scenario1"
+                class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
                 <i class="fa-solid fa-chart-line"></i> السيناريو الأول
             </button>
-            <button onclick="switchTab('scenario2')" id="btn-scenario2" class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
+            <button onclick="switchTab('scenario2')" id="btn-scenario2"
+                class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
                 <i class="fa-solid fa-code"></i> السيناريو الثاني
             </button>
-            <button onclick="switchTab('scenario3')" id="btn-scenario3" class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
+            <button onclick="switchTab('scenario3')" id="btn-scenario3"
+                class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
                 <i class="fa-solid fa-users"></i> السيناريو الثالث
             </button>
-            <button onclick="switchTab('scenario4')" id="btn-scenario4" class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
+            <button onclick="switchTab('scenario4')" id="btn-scenario4"
+                class="tab-btn px-4 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border border-white/5 hover:border-cosmic-cyan/50">
                 <i class="fa-solid fa-rocket"></i> السيناريو الرابع
             </button>
         </div>
@@ -160,7 +166,7 @@
         <!-- محتوى التبويبات -->
         <div id="tab-content" class="space-y-12">
 
-            <!-- تبويب: تأسيس المقر -->
+            <!-- تبويب: تأسيس المقر (تم استبداله بالبيانات الجديدة) -->
             <div id="content-setup" class="tab-pane space-y-6">
                 <section class="glass p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-cosmic-cyan/5 rounded-full filter blur-xl"></div>
@@ -172,31 +178,49 @@
                             <thead class="text-cosmic-cyan border-b border-white/10 font-bold">
                                 <tr>
                                     <th class="pb-3">البند</th>
-                                    <th class="pb-3 text-left">التكلفة (جنيه مصري)</th>
+                                    <th class="pb-3 text-center">جنيه</th>
+                                    <th class="pb-3 text-left">ريال</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-white/5 text-gray-300">
-                                <tr><td class="py-3">إيجار أول شهر</td><td class="py-3 text-left">10,000</td></tr>
-                                <tr><td class="py-3">تأمين شهرين</td><td class="py-3 text-left">20,000</td></tr>
-                                <tr><td class="py-3">مكاتب عمل لـ6 أفراد</td><td class="py-3 text-left">10,000</td></tr>
-                                <tr><td class="py-3">ترابيزة اجتماعات</td><td class="py-3 text-left">5,000</td></tr>
-                                <tr><td class="py-3">10 كراسي</td><td class="py-3 text-left">9,000</td></tr>
-                                <tr><td class="py-3">تكييف شامل التركيب</td><td class="py-3 text-left">30,000</td></tr>
-                                <tr><td class="py-3">الإنترنت والتركيب</td><td class="py-3 text-left">15,000</td></tr>
-                                <tr><td class="py-3">كاتل</td><td class="py-3 text-left">3,000</td></tr>
-                                <tr><td class="py-3">سبورة</td><td class="py-3 text-left">2,500</td></tr>
-                                <tr><td class="py-3">سلة قمامة وإكسسوارات</td><td class="py-3 text-left">500</td></tr>
+                                <tr>
+                                    <td class="py-3">إيجار أول شهر</td>
+                                    <td class="py-3 text-center">10,000</td>
+                                    <td class="py-3 text-left text-gray-400">769</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3">تأمين شهرين</td>
+                                    <td class="py-3 text-center">20,000</td>
+                                    <td class="py-3 text-left text-gray-400">1,538</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3">مكاتب 6 أفراد</td>
+                                    <td class="py-3 text-center">10,000</td>
+                                    <td class="py-3 text-left text-gray-400">769</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3">10 كراسي</td>
+                                    <td class="py-3 text-center">10,000</td>
+                                    <td class="py-3 text-left text-gray-400">769</td>
+                                </tr>
                                 <tr class="text-white">
-                                    <td class="py-3 font-semibold">6 أجهزة كمبيوتر</td>
-                                    <td class="py-3 text-left font-bold text-cosmic-cyan">70,000</td>
+                                    <td class="py-3 font-semibold">6 أجهزة Laptop</td>
+                                    <td class="py-3 text-center font-bold text-white">70,000</td>
+                                    <td class="py-3 text-left font-bold text-gray-400">5,385</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 pt-6 border-t border-white/10 text-xs font-bold text-center">
-                        <div class="p-3 rounded-xl bg-white/5 border border-white/5">الإجمالي قبل الاحتياطي = 175,000 جنيه</div>
-                        <div class="p-3 rounded-xl bg-cosmic-star/10 border border-cosmic-star/20 text-cosmic-star">احتياطي (10%) = 17,500 جنيه</div>
-                        <div class="p-3 rounded-xl bg-cosmic-cyan/10 border border-cosmic-cyan/30 text-cosmic-cyan">إجمالي تأسيس المقر = 192,500 جنيه مصري</div>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-white/10 text-sm font-bold text-center">
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+                            <span class="text-gray-400 block text-xs font-normal mb-1">الإجمالي بالجنيه</span>
+                            <span class="text-white text-base">120,000 جنيه</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-cyan/10 border border-cosmic-cyan/30 text-cosmic-cyan">
+                            <span class="text-gray-400 block text-xs font-normal mb-1">الإجمالي بالريال</span>
+                            <span class="text-base">9,230 ريال</span>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -204,12 +228,14 @@
             <!-- تبويب: السيناريو الأول -->
             <div id="content-scenario1" class="tab-pane hidden space-y-6">
                 <div class="glass p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
+                    <div
+                        class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
                         <div>
                             <h2 class="font-bold text-2xl text-cosmic-cyan">السيناريو الأول</h2>
                             <p class="text-xs text-gray-400 mt-1">تشغيل قسم المبيعات فقط (قبل بدء تنفيذ المشاريع)</p>
                         </div>
-                        <div class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-cosmic-cyan/15 border border-cosmic-cyan/30 text-xs text-cosmic-cyan font-bold">
+                        <div
+                            class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-cosmic-cyan/15 border border-cosmic-cyan/30 text-xs text-cosmic-cyan font-bold">
                             الهدف: بناء قاعدة عملاء، حجز الاجتماعات، وإغلاق أول العقود
                         </div>
                     </div>
@@ -217,16 +243,37 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- فريق المبيعات -->
                         <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                            <h3 class="text-sm font-bold text-cosmic-star mb-3"><i class="fa-solid fa-chart-line"></i> فريق المبيعات</h3>
+                            <h3 class="text-sm font-bold text-cosmic-star mb-3"><i class="fa-solid fa-chart-line"></i>
+                                فريق المبيعات</h3>
                             <table class="w-full text-xs text-right">
                                 <thead class="text-gray-400 border-b border-white/5">
-                                    <tr><th class="pb-2">الوظيفة</th><th class="pb-2 text-center">العدد</th><th class="pb-2 text-left">المرتب</th></tr>
+                                    <tr>
+                                        <th class="pb-2">الوظيفة</th>
+                                        <th class="pb-2 text-center">العدد</th>
+                                        <th class="pb-2 text-left">المرتب</th>
+                                    </tr>
                                 </thead>
                                 <tbody class="text-gray-300 divide-y divide-white/5">
-                                    <tr><td class="py-2">Team Leader</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">Tele Sales</td><td class="py-2 text-center">3</td><td class="py-2 text-left">21,000</td></tr>
-                                    <tr><td class="py-2">Saudi Sales Speaker</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr class="font-bold text-cosmic-star"><td class="py-2">إجمالي فريق المبيعات</td><td class="py-2 text-center">5</td><td class="py-2 text-left">41,000 ج / 3,154 ر.س</td></tr>
+                                    <tr>
+                                        <td class="py-2">Team Leader</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Tele Sales</td>
+                                        <td class="py-2 text-center">3</td>
+                                        <td class="py-2 text-left">21,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Saudi Sales Speaker</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr class="font-bold text-cosmic-star">
+                                        <td class="py-2">إجمالي فريق المبيعات</td>
+                                        <td class="py-2 text-center">5</td>
+                                        <td class="py-2 text-left">41,000 ج / 3,154 ر.س</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -234,19 +281,22 @@
                         <!-- الإدارة وفريق In-house -->
                         <div class="space-y-4">
                             <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                                <h3 class="text-sm font-bold text-cosmic-gold mb-2"><i class="fa-solid fa-user-tie"></i> الإدارة</h3>
+                                <h3 class="text-sm font-bold text-cosmic-gold mb-2"><i class="fa-solid fa-user-tie"></i>
+                                    الإدارة</h3>
                                 <div class="flex justify-between text-xs text-gray-300">
                                     <span>CEO + الإدارة (3 أفراد)</span>
                                     <span class="font-bold text-cosmic-gold">24,000 جنيه (1,846 ريال)</span>
                                 </div>
                             </div>
                             <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                                <h3 class="text-sm font-bold text-purple-400 mb-2"><i class="fa-solid fa-user-group"></i> فريق In-House (Part-Time)</h3>
+                                <h3 class="text-sm font-bold text-purple-400 mb-2"><i
+                                        class="fa-solid fa-user-group"></i> فريق In-House (Part-Time)</h3>
                                 <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">
                                     <li>Graphic Designer (Part-Time)</li>
                                     <li>Social Media Specialist (Part-Time)</li>
                                 </ul>
-                                <div class="mt-2 text-left font-bold text-purple-400 text-xs">10,000 جنيه (769 ريال)</div>
+                                <div class="mt-2 text-left font-bold text-purple-400 text-xs">10,000 جنيه (769 ريال)
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -254,16 +304,23 @@
                     <!-- المصروفات وإجمالي السيناريو -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-white/10">
                         <div class="bg-white/5 p-4 rounded-xl border border-white/5">
-                            <h3 class="text-sm font-bold text-white mb-2"><i class="fa-solid fa-wallet"></i> المصروفات التشغيلية</h3>
+                            <h3 class="text-sm font-bold text-white mb-2"><i class="fa-solid fa-wallet"></i> المصروفات
+                                التشغيلية</h3>
                             <div class="space-y-1 text-xs text-gray-300">
                                 <div class="flex justify-between"><span>إيجار</span><span>10,000 جنيه</span></div>
-                                <div class="flex justify-between"><span>كهرباء + إنترنت + غاز</span><span>4,000 جنيه</span></div>
-                                <div class="flex justify-between font-bold border-t border-white/5 pt-1 mt-1 text-cosmic-cyan"><span>الإجمالي</span><span>14,000 جنيه (1,077 ريال)</span></div>
+                                <div class="flex justify-between"><span>كهرباء + إنترنت + غاز</span><span>4,000
+                                        جنيه</span></div>
+                                <div
+                                    class="flex justify-between font-bold border-t border-white/5 pt-1 mt-1 text-cosmic-cyan">
+                                    <span>الإجمالي</span><span>14,000 جنيه (1,077 ريال)</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="bg-cosmic-cyan/10 p-5 rounded-xl border border-cosmic-cyan/20 flex flex-col justify-center">
-                            <h3 class="text-sm font-bold text-cosmic-cyan mb-2 text-center"><i class="fa-solid fa-calculator"></i> إجمالي السيناريو الأول</h3>
+                        <div
+                            class="bg-cosmic-cyan/10 p-5 rounded-xl border border-cosmic-cyan/20 flex flex-col justify-center">
+                            <h3 class="text-sm font-bold text-cosmic-cyan mb-2 text-center"><i
+                                    class="fa-solid fa-calculator"></i> إجمالي السيناريو الأول</h3>
                             <div class="grid grid-cols-2 gap-4 text-center text-xs">
                                 <div class="bg-black/30 p-2 rounded-lg">
                                     <span class="block text-gray-400">شهريًا</span>
@@ -284,12 +341,14 @@
             <!-- تبويب: السيناريو الثاني -->
             <div id="content-scenario2" class="tab-pane hidden space-y-6">
                 <div class="glass p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
+                    <div
+                        class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
                         <div>
                             <h2 class="font-bold text-2xl text-cosmic-star">السيناريو الثاني</h2>
                             <p class="text-xs text-gray-400 mt-1">بدء تنفيذ مشروع زد</p>
                         </div>
-                        <div class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-cosmic-star/15 border border-cosmic-star/30 text-xs text-cosmic-star font-bold">
+                        <div
+                            class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-cosmic-star/15 border border-cosmic-star/30 text-xs text-cosmic-star font-bold">
                             الهدف: تنفيذ مشروع زد مع استمرار فريق المبيعات في جلب العملاء
                         </div>
                     </div>
@@ -297,33 +356,79 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <!-- فريق مشروع زد -->
                         <div class="bg-black/40 p-5 rounded-xl border border-white/5 lg:col-span-1">
-                            <h3 class="text-sm font-bold text-cosmic-cyan mb-3"><i class="fa-solid fa-code"></i> فريق مشروع زد</h3>
+                            <h3 class="text-sm font-bold text-cosmic-cyan mb-3"><i class="fa-solid fa-code"></i> فريق
+                                مشروع زد</h3>
                             <table class="w-full text-xs text-right">
                                 <thead class="text-gray-400 border-b border-white/5">
-                                    <tr><th class="pb-2">الوظيفة</th><th class="pb-2 text-center">العدد</th><th class="pb-2 text-left">المرتب</th></tr>
+                                    <tr>
+                                        <th class="pb-2">الوظيفة</th>
+                                        <th class="pb-2 text-center">العدد</th>
+                                        <th class="pb-2 text-left">المرتب</th>
+                                    </tr>
                                 </thead>
                                 <tbody class="text-gray-300 divide-y divide-white/5">
-                                    <tr><td class="py-2">Programmer</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">UI/UX</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">SEO</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">Account Manager</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr class="font-bold text-cosmic-cyan"><td class="py-2">إجمالي الفريق</td><td class="py-2 text-center">4</td><td class="py-2 text-left">40,000 ج / 3,077 ر.س</td></tr>
+                                    <tr>
+                                        <td class="py-2">Programmer</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">UI/UX</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">SEO</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Account Manager</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr class="font-bold text-cosmic-cyan">
+                                        <td class="py-2">إجمالي الفريق</td>
+                                        <td class="py-2 text-center">4</td>
+                                        <td class="py-2 text-left">40,000 ج / 3,077 ر.س</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <!-- فريق المبيعات -->
                         <div class="bg-black/40 p-5 rounded-xl border border-white/5 lg:col-span-1">
-                            <h3 class="text-sm font-bold text-cosmic-star mb-3"><i class="fa-solid fa-chart-line"></i> فريق المبيعات</h3>
+                            <h3 class="text-sm font-bold text-cosmic-star mb-3"><i class="fa-solid fa-chart-line"></i>
+                                فريق المبيعات</h3>
                             <table class="w-full text-xs text-right">
                                 <thead class="text-gray-400 border-b border-white/5">
-                                    <tr><th class="pb-2">الوظيفة</th><th class="pb-2 text-center">العدد</th><th class="pb-2 text-left">المرتب</th></tr>
+                                    <tr>
+                                        <th class="pb-2">الوظيفة</th>
+                                        <th class="pb-2 text-center">العدد</th>
+                                        <th class="pb-2 text-left">المرتب</th>
+                                    </tr>
                                 </thead>
                                 <tbody class="text-gray-300 divide-y divide-white/5">
-                                    <tr><td class="py-2">Team Leader</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">Tele Sales</td><td class="py-2 text-center">3</td><td class="py-2 text-left">21,000</td></tr>
-                                    <tr><td class="py-2">Saudi Sales Speaker</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr class="font-bold text-cosmic-star"><td class="py-2">إجمالي المبيعات</td><td class="py-2 text-center">5</td><td class="py-2 text-left">41,000 ج / 3,154 ر.س</td></tr>
+                                    <tr>
+                                        <td class="py-2">Team Leader</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Tele Sales</td>
+                                        <td class="py-2 text-center">3</td>
+                                        <td class="py-2 text-left">21,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Saudi Sales Speaker</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr class="font-bold text-cosmic-star">
+                                        <td class="py-2">إجمالي المبيعات</td>
+                                        <td class="py-2 text-center">5</td>
+                                        <td class="py-2 text-left">41,000 ج / 3,154 ر.س</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -350,7 +455,8 @@
                     <!-- إجمالي السيناريو الثاني -->
                     <div class="mt-6 pt-6 border-t border-white/10">
                         <div class="bg-cosmic-star/10 p-5 rounded-xl border border-cosmic-star/20 max-w-xl mx-auto">
-                            <h3 class="text-sm font-bold text-cosmic-star mb-3 text-center"><i class="fa-solid fa-calculator"></i> إجمالي السيناريو الثاني</h3>
+                            <h3 class="text-sm font-bold text-cosmic-star mb-3 text-center"><i
+                                    class="fa-solid fa-calculator"></i> إجمالي السيناريو الثاني</h3>
                             <div class="grid grid-cols-2 gap-4 text-center text-xs">
                                 <div class="bg-black/30 p-3 rounded-lg">
                                     <span class="block text-gray-400">شهريًا</span>
@@ -371,12 +477,15 @@
             <!-- تبويب: السيناريو الثالث -->
             <div id="content-scenario3" class="tab-pane hidden space-y-6">
                 <div class="glass p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
+                    <div
+                        class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
                         <div>
                             <h2 class="font-bold text-2xl text-cosmic-gold">السيناريو الثالث</h2>
-                            <p class="text-xs text-gray-400 mt-1">مع بداية دخول عملاء هيتم التعيين علي حسب خدمات العملاء لخفض التكاليف حد المستطاع</p>
+                            <p class="text-xs text-gray-400 mt-1">مع بداية دخول عملاء هيتم التعيين علي حسب خدمات العملاء
+                                لخفض التكاليف حد المستطاع</p>
                         </div>
-                        <div class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-cosmic-gold/15 border border-cosmic-gold/30 text-xs text-cosmic-gold font-bold">
+                        <div
+                            class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-cosmic-gold/15 border border-cosmic-gold/30 text-xs text-cosmic-gold font-bold">
                             الهدف: تكوين فريق تشغيل متكامل لإدارة العملاء
                         </div>
                     </div>
@@ -384,20 +493,57 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <!-- فريق العملاء -->
                         <div class="bg-black/40 p-5 rounded-xl border border-white/5 lg:col-span-2">
-                            <h3 class="text-sm font-bold text-cosmic-gold mb-3"><i class="fa-solid fa-user-group"></i> فريق العملاء</h3>
+                            <h3 class="text-sm font-bold text-cosmic-gold mb-3"><i class="fa-solid fa-user-group"></i>
+                                فريق العملاء</h3>
                             <table class="w-full text-xs text-right">
                                 <thead class="text-gray-400 border-b border-white/5">
-                                    <tr><th class="pb-2">الوظيفة</th><th class="pb-2 text-center">العدد</th><th class="pb-2 text-left">المرتب (جنيه)</th></tr>
+                                    <tr>
+                                        <th class="pb-2">الوظيفة</th>
+                                        <th class="pb-2 text-center">العدد</th>
+                                        <th class="pb-2 text-left">المرتب (جنيه)</th>
+                                    </tr>
                                 </thead>
                                 <tbody class="text-gray-300 divide-y divide-white/5">
-                                    <tr><td class="py-2">Account Manager</td><td class="py-2 text-center">1</td><td class="py-2 text-left">8,000</td></tr>
-                                    <tr><td class="py-2">Social Media Specialist</td><td class="py-2 text-center">1</td><td class="py-2 text-left">8,000</td></tr>
-                                    <tr><td class="py-2">Media Buyer</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">SEO Specialist</td><td class="py-2 text-center">1</td><td class="py-2 text-left">8,000</td></tr>
-                                    <tr><td class="py-2">Graphic Designer</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">Motion Designer</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">Video Editor</td><td class="py-2 text-center">1</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr class="font-bold text-cosmic-gold"><td class="py-2">إجمالي فريق العملاء</td><td class="py-2 text-center">7</td><td class="py-2 text-left">64,000 ج / 4,923 ر.س</td></tr>
+                                    <tr>
+                                        <td class="py-2">Account Manager</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">8,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Social Media Specialist</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">8,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Media Buyer</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">SEO Specialist</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">8,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Graphic Designer</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Motion Designer</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Video Editor</td>
+                                        <td class="py-2 text-center">1</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr class="font-bold text-cosmic-gold">
+                                        <td class="py-2">إجمالي فريق العملاء</td>
+                                        <td class="py-2 text-center">7</td>
+                                        <td class="py-2 text-left">64,000 ج / 4,923 ر.س</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -427,7 +573,8 @@
                     <!-- إجمالي السيناريو الثالث -->
                     <div class="mt-6 pt-6 border-t border-white/10">
                         <div class="bg-cosmic-gold/10 p-5 rounded-xl border border-cosmic-gold/20 max-w-xl mx-auto">
-                            <h3 class="text-sm font-bold text-cosmic-gold mb-3 text-center"><i class="fa-solid fa-calculator"></i> إجمالي السيناريو الثالث</h3>
+                            <h3 class="text-sm font-bold text-cosmic-gold mb-3 text-center"><i
+                                    class="fa-solid fa-calculator"></i> إجمالي السيناريو الثالث</h3>
                             <div class="grid grid-cols-2 gap-4 text-center text-xs">
                                 <div class="bg-black/30 p-3 rounded-lg">
                                     <span class="block text-gray-400">شهريًا</span>
@@ -448,12 +595,14 @@
             <!-- تبويب: السيناريو الرابع -->
             <div id="content-scenario4" class="tab-pane hidden space-y-6">
                 <div class="glass p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
+                    <div
+                        class="flex flex-col md:flex-row md:items-center justify-between mb-6 border-b border-white/10 pb-4">
                         <div>
                             <h2 class="font-bold text-2xl text-purple-400">السيناريو الرابع</h2>
                             <p class="text-xs text-gray-400 mt-1">مرحلة التوسع</p>
                         </div>
-                        <div class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-purple-500/15 border border-purple-500/30 text-xs text-purple-300 font-bold">
+                        <div
+                            class="mt-3 md:mt-0 px-4 py-2 rounded-xl bg-purple-500/15 border border-purple-500/30 text-xs text-purple-300 font-bold">
                             الهدف: تحويل الشركة إلى مؤسسة كاملة مع وجود أكثر من 12 عميل نشط
                         </div>
                     </div>
@@ -461,23 +610,40 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- الفريق الإداري الجديد -->
                         <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                            <h3 class="text-sm font-bold text-purple-400 mb-3"><i class="fa-solid fa-user-shield"></i> الفريق الإداري الجديد</h3>
+                            <h3 class="text-sm font-bold text-purple-400 mb-3"><i class="fa-solid fa-user-shield"></i>
+                                الفريق الإداري الجديد</h3>
                             <table class="w-full text-xs text-right">
                                 <thead class="text-gray-400 border-b border-white/5">
-                                    <tr><th class="pb-2">الوظيفة</th><th class="pb-2 text-left">المرتب</th></tr>
+                                    <tr>
+                                        <th class="pb-2">الوظيفة</th>
+                                        <th class="pb-2 text-left">المرتب</th>
+                                    </tr>
                                 </thead>
                                 <tbody class="text-gray-300 divide-y divide-white/5">
-                                    <tr><td class="py-2">HR</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr><td class="py-2">Accountant</td><td class="py-2 text-left">12,000</td></tr>
-                                    <tr><td class="py-2">Content Creator</td><td class="py-2 text-left">10,000</td></tr>
-                                    <tr class="font-bold text-purple-400"><td class="py-2">الإجمالي الجديد</td><td class="py-2 text-left">32,000 ج / 2,462 ر.س</td></tr>
+                                    <tr>
+                                        <td class="py-2">HR</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Accountant</td>
+                                        <td class="py-2 text-left">12,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Content Creator</td>
+                                        <td class="py-2 text-left">10,000</td>
+                                    </tr>
+                                    <tr class="font-bold text-purple-400">
+                                        <td class="py-2">الإجمالي الجديد</td>
+                                        <td class="py-2 text-left">32,000 ج / 2,462 ر.س</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <!-- الاشتراكات البرمجية -->
                         <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                            <h3 class="text-sm font-bold text-cosmic-cyan mb-3"><i class="fa-solid fa-layer-group"></i> الاشتراكات المدفوعة</h3>
+                            <h3 class="text-sm font-bold text-cosmic-cyan mb-3"><i class="fa-solid fa-layer-group"></i>
+                                الاشتراكات المدفوعة</h3>
                             <div class="grid grid-cols-2 gap-x-2 gap-y-1 text-[11px] text-gray-300">
                                 <div>* Google Workspace</div>
                                 <div>* Adobe Creative Cloud</div>
@@ -496,18 +662,24 @@
 
                         <!-- هيكل تكاليف التوسع -->
                         <div class="bg-black/40 p-5 rounded-xl border border-white/5 text-xs text-gray-300 space-y-2">
-                            <h3 class="text-sm font-bold text-white mb-1"><i class="fa-solid fa-network-wired"></i> هيكل التشغيل التراكمي</h3>
-                            <div class="flex justify-between"><span>التشغيل السابق (سيناريو 3):</span><span class="font-bold">183,000 ج</span></div>
-                            <div class="flex justify-between"><span>الفريق الإداري الجديد:</span><span class="font-bold text-purple-400">32,000 ج</span></div>
-                            <div class="flex justify-between"><span>الاشتراكات الشهرية:</span><span class="font-bold text-cosmic-cyan">20,400 ج</span></div>
-                            <div class="flex justify-between"><span>المصروفات التشغيلية الثابتة:</span><span class="font-bold">14,000 ج</span></div>
+                            <h3 class="text-sm font-bold text-white mb-1"><i class="fa-solid fa-network-wired"></i> هيكل
+                                التشغيل التراكمي</h3>
+                            <div class="flex justify-between"><span>التشغيل السابق (سيناريو 3):</span><span
+                                    class="font-bold">183,000 ج</span></div>
+                            <div class="flex justify-between"><span>الفريق الإداري الجديد:</span><span
+                                    class="font-bold text-purple-400">32,000 ج</span></div>
+                            <div class="flex justify-between"><span>الاشتراكات الشهرية:</span><span
+                                    class="font-bold text-cosmic-cyan">20,400 ج</span></div>
+                            <div class="flex justify-between"><span>المصروفات التشغيلية الثابتة:</span><span
+                                    class="font-bold">14,000 ج</span></div>
                         </div>
                     </div>
 
                     <!-- إجمالي مرحلة التوسع -->
                     <div class="mt-6 pt-6 border-t border-white/10">
                         <div class="bg-purple-500/10 p-5 rounded-xl border border-purple-500/20 max-w-xl mx-auto">
-                            <h3 class="text-sm font-bold text-purple-300 mb-3 text-center"><i class="fa-solid fa-calculator"></i> إجمالي التشغيل والتوسع الكامل</h3>
+                            <h3 class="text-sm font-bold text-purple-300 mb-3 text-center"><i
+                                    class="fa-solid fa-calculator"></i> إجمالي التشغيل والتوسع الكامل</h3>
                             <div class="grid grid-cols-2 gap-4 text-center text-xs">
                                 <div class="bg-black/30 p-3 rounded-lg">
                                     <span class="block text-gray-400">شهريًا (جنيه / ريال)</span>
@@ -530,7 +702,8 @@
         <!-- جدول ملخص مالي كامل للمقارنة السريعة -->
         <section class="glass p-6 md:p-8 rounded-2xl border border-white/15 relative overflow-hidden">
             <h2 class="font-bold text-xl text-white mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-square-poll-vertical text-cosmic-cyan"></i> ملخص المقارنة السريعة للسيناريوهات المالية
+                <i class="fa-solid fa-square-poll-vertical text-cosmic-cyan"></i> ملخص المقارنة السريعة للسيناريوهات
+                المالية
             </h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-right text-xs md:text-sm">
@@ -544,10 +717,11 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-white/5 text-gray-300 font-sans">
+                        <!-- تم تحديث الإجمالي هنا أيضًا ليتطابق مع البيانات الجديدة -->
                         <tr class="hover:bg-white/5">
-                            <td class="py-3.5 font-bold">تأسيس المقر (مرة واحدة)</td>
-                            <td class="py-3.5 text-center text-cosmic-cyan font-bold">192,500 ج</td>
-                            <td class="py-3.5 text-center text-cosmic-cyan">-</td>
+                            <td class="py-3.5 font-bold">تأسيس الفرع (مرة واحدة)</td>
+                            <td class="py-3.5 text-center text-cosmic-cyan font-bold">120,000 ج</td>
+                            <td class="py-3.5 text-center text-cosmic-cyan font-bold">9,230 ر.س</td>
                             <td class="py-3.5 text-center text-gray-500">—</td>
                             <td class="py-3.5 text-left text-gray-500">—</td>
                         </tr>
@@ -588,26 +762,21 @@
 
     <!-- نظام تبديل التبويبات والأنيميشن التفاعلي -->
     <script>
-        // دالة تبديل التبويبات (Tabs)
         function switchTab(tabId) {
-            // إخفاء جميع محتويات التبويبات
             const panes = document.querySelectorAll('.tab-pane');
             panes.forEach(pane => {
                 pane.classList.add('hidden');
             });
 
-            // إزالة الحالة النشطة من كل الأزرار
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => {
                 btn.classList.remove('active');
             });
 
-            // إظهار التبويب المحدد وتنشيط الزر الخاص به
             document.getElementById('content-' + tabId).classList.remove('hidden');
             document.getElementById('btn-' + tabId).classList.add('active');
         }
 
-        // محرك الأنيميشن الرياضي لتوليد النجوم المتحركة في الخلفية
         const starfieldCanvas = document.getElementById('starfield');
         const starCtx = starfieldCanvas.getContext('2d');
         let stars = [];
